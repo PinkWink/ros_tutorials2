@@ -6,13 +6,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/base.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/base.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -33,13 +33,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link1.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link1.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -56,19 +56,20 @@
             <axis xyz="0 0 1"/>
             <limit effort="1000" velocity="${85*pi/180}" lower="${-170*pi/180}" upper="${170*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a1"/>
 
 
         <link name="${prefix}link2">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link2.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link2.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -85,19 +86,20 @@
             <axis xyz="0 1 0"/>
             <limit effort="1000" velocity="${85*pi/180}" lower="${-120*pi/180}" upper="${120*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a2"/>
 
 
         <link name="${prefix}link3">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link3.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link3.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -114,19 +116,20 @@
             <axis xyz="0 0 1"/>
             <limit effort="1000" velocity="${100*pi/180}" lower="${-170*pi/180}" upper="${170*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a3"/>
 
 
         <link name="${prefix}link4">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link4.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link4.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -143,19 +146,20 @@
             <axis xyz="0 1 0"/>
             <limit effort="1000" velocity="${75*pi/180}" lower="${-120*pi/180}" upper="${120*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a4"/>
 
 
         <link name="${prefix}link5">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link5.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link5.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -172,19 +176,20 @@
             <axis xyz="0 0 1"/>
             <limit effort="1000" velocity="${130*pi/180}" lower="${-170*pi/180}" upper="${170*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a5"/>
 
 
         <link name="${prefix}link6">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link6.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link6.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -201,19 +206,20 @@
             <axis xyz="0 1 0"/>
             <limit effort="1000" velocity="${135*pi/180}" lower="${-120*pi/180}" upper="${120*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a6"/>
 
 
         <link name="${prefix}link7">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link7.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link7.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_description/meshes/link7.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link7.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -230,6 +236,7 @@
             <axis xyz="0 0 1"/>
             <limit effort="1000" velocity="${135*pi/180}" lower="${-175*pi/180}" upper="${175*pi/180}"/>
         </joint>
+        <xacro:insert_position_transmission name="${prefix}a7"/>
 
         <link name="${prefix}tip_link"/>
 
