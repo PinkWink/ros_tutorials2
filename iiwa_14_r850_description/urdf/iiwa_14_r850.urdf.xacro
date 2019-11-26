@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="iiwa_14_r850" params="parent *origin prefix">
+        <link name="${prefix}base_link">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/base.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/base.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="7.054081"/>
+                <origin xyz="-0.012841 0.000000 0.071507"/>
+                <inertia ixx="0.031237" ixy="0.0" ixz="0.000870" iyy="0.039718" iyz="0.0" izz="0.043120"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}base_fixed_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="${prefix}base_link"/>
+            <xacro:insert_block name="origin" />
+        </joint>
+
+
+        <link name="${prefix}link1">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link1.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link1.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="5.288551"/>
+                <origin xyz="0.000001 -0.033788 0.122377"/>
+                <inertia ixx="0.042430" ixy="0.0" ixz="0.000001" iyy="0.042810" iyz="0.006332" izz="0.015854"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a1" type="revolute">
+            <parent link="${prefix}base_link"/>
+            <child link="${prefix}link1"/>
+            <origin xyz="0 0 0.1575" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit effort="1000" velocity="${85*pi/180}" lower="${-170*pi/180}" upper="${170*pi/180}"/>
+        </joint>
+
+
+        <link name="${prefix}link2">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link2.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link2.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="5.688776"/>
+                <origin xyz="0.000137 0.037540 0.076351"/>
+                <inertia ixx="0.055162" ixy="-0.000032" ixz="0.000056" iyy="0.053966" iyz="0.010025" izz="0.016512"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a2" type="revolute">
+            <parent link="${prefix}link1"/>
+            <child link="${prefix}link2"/>
+            <origin xyz="0 0 0.2025" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+            <limit effort="1000" velocity="${85*pi/180}" lower="${-120*pi/180}" upper="${120*pi/180}"/>
+        </joint>
+
+
+        <link name="${prefix}link3">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link3.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link3.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="3.460524"/>
+                <origin xyz="0.000000 0.034907 0.113092"/>
+                <inertia ixx="0.021705" ixy="0.0" ixz="0.0" iyy="0.020716" iyz="-0.003840" izz="0.007692"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a3" type="revolute">
+            <parent link="${prefix}link2"/>
+            <child link="${prefix}link3"/>
+            <origin xyz="0 0 0.2373" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit effort="1000" velocity="${100*pi/180}" lower="${-170*pi/180}" upper="${170*pi/180}"/>
+        </joint>
+
+
+        <link name="${prefix}link4">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link4.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link4.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="4.122630"/>
+                <origin xyz="0.000000 -0.029288 0.086968"/>
+                <inertia ixx="0.032396" ixy="0.0" ixz="0.0" iyy="0.030747" iyz="-0.006017" izz="0.009876"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a4" type="revolute">
+            <parent link="${prefix}link3"/>
+            <child link="${prefix}link4"/>
+            <origin xyz="0 0 0.182" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+            <limit effort="1000" velocity="${75*pi/180}" lower="${-120*pi/180}" upper="${120*pi/180}"/>
+        </joint>
+
+
+        <link name="${prefix}link5">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link5.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link5.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="1.563267"/>
+                <origin xyz="0.000000 -0.029828 0.066251"/>
+                <inertia ixx="0.008668" ixy="0.0" ixz="0.0" iyy="0.007290" iyz="0.002866" izz="0.003930"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a5" type="revolute">
+            <parent link="${prefix}link4"/>
+            <child link="${prefix}link5"/>
+            <origin xyz="0 0 0.2168" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit effort="1000" velocity="${130*pi/180}" lower="${-170*pi/180}" upper="${170*pi/180}"/>
+        </joint>
+
+
+        <link name="${prefix}link6">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link6.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link6.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="2.328466"/>
+                <origin xyz="0.000001 0.000327 0.000604"/>
+                <inertia ixx="0.006302" ixy="0.0" ixz="0.0" iyy="0.006032" iyz="0.000314" izz="0.004589"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a6" type="revolute">
+            <parent link="${prefix}link5"/>
+            <child link="${prefix}link6"/>
+            <origin xyz="0 0 0.1825" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+            <limit effort="1000" velocity="${135*pi/180}" lower="${-120*pi/180}" upper="${120*pi/180}"/>
+        </joint>
+
+
+        <link name="${prefix}link7">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link7.dae" scale="1 1 1"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://iiwa_14_r850_description/meshes/link7.dae" scale="1 1 1"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="0.393705"/>
+                <origin xyz="0.000002 -0.000001 0.016970"/>
+                <inertia ixx="0.000285" ixy="0.0" ixz="0.0" iyy="0.000285" iyz="0.0" izz="0.000445"/>
+            </inertial>
+        </link>
+
+        <joint name="${prefix}a7" type="revolute">
+            <parent link="${prefix}link6"/>
+            <child link="${prefix}link7"/>
+            <origin xyz="0 0 0.081" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit effort="1000" velocity="${135*pi/180}" lower="${-175*pi/180}" upper="${175*pi/180}"/>
+        </joint>
+
+        <link name="${prefix}tip_link"/>
+
+        <joint name="${prefix}tip_fixed_joint" type="fixed">
+            <parent link="${prefix}link7"/>
+            <child link="${prefix}tip_link"/>
+            <origin xyz="0 0 0.045" rpy="0 0 0"/>
+        </joint>
+    </xacro:macro>
+</robot>
