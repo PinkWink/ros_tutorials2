@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:macro name="iiwa_14_r850" params="parent *origin prefix">
+    <xacro:macro name="iiwa_14_r820" params="parent *origin prefix">
         <link name="${prefix}base_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/base.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/base.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -33,13 +33,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link1.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link1.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -63,13 +63,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link2.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link2.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -93,13 +93,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link3.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link3.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -123,13 +123,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link4.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link4.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -153,13 +153,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link5.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link5.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -183,13 +183,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link6.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link6.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
@@ -213,13 +213,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link7.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link7.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://iiwa_14_r850_robot_description/meshes/link7.dae" scale="1 1 1"/>
+                    <mesh filename="package://iiwa_14_r820_robot_description/meshes/link7.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>

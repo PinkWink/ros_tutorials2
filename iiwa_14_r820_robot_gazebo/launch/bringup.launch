@@ -1,10 +1,10 @@
 <launch>\
-    <include file="$(find iiwa_14_r850_robot_description)/launch/upload_robot.launch"/>
+    <include file="$(find iiwa_14_r820_robot_description)/launch/upload_robot.launch"/>
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="use_sim_time" value="true" />
         <arg name="verbose" value="true"/>
     </include>
 
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-            args="-urdf -model iiwa_14_r850_robot -param robot_description"/>
+            args="-urdf -model iiwa_14_r820_robot -param robot_description"/>
 </launch>
