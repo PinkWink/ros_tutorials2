@@ -7,4 +7,6 @@
 
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
             args="-urdf -model iiwa_14_r820_robot -param robot_description"/>
+
+    <include file="$(find iiwa_14_r820_robot_control)/launch/bringup.launch" />
 </launch>

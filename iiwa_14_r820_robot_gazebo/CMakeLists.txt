@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES iiwa_14_r820_robot_gazebo
-#  CATKIN_DEPENDS gazebo_ros iiwa_14_r850_robot_description
+#  CATKIN_DEPENDS gazebo_ros iiwa_14_r820_robot_description
 #  DEPENDS system_lib
 )
 
